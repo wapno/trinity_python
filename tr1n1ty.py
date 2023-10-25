@@ -1,12 +1,12 @@
 import configparser
 from irc.client import SimpleIRCClient
-from quote_handler import QuoteHandler  # Import the QuoteHandler class
+from quote_handler import QuoteHandler  # import quote handler module
 
 class IRCBot(SimpleIRCClient):
     def __init__(self, config_file):
         super().__init__()
         self.config = self.load_config(config_file)
-        self.quote_handler = QuoteHandler()  # Create an instance of QuoteHandler
+        self.quote_handler = QuoteHandler()  # initialize quotehandler
 
     def load_config(self, config_file):
         config = configparser.ConfigParser()
